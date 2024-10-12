@@ -13,5 +13,4 @@ Using NodeJs it grabs the image and breaks it down to individual rgb values. The
 
 ## Installation
 
-NPM install [get-pixels](https://www.npmjs.com/package/get-pixels?activeTab=readme) & [ndarry](https://www.npmjs.com/package/ndarray)
-Run imageToAscii.js
+NPM install [get-pixels](https://www.npmjs.com/package/get-pixels?activeTab=readme) & [ndarry](https://www.npmjs.com/package/ndarray) then run imageToAscii.js
