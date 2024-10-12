@@ -14,4 +14,4 @@ Using NodeJs it grabs the image and breaks it down to individual rgb values. The
 ## Installation
 
 NPM install [get-pixels](https://www.npmjs.com/package/get-pixels?activeTab=readme), [ndarry](https://www.npmjs.com/package/ndarray), & [sharp](https://www.npmjs.com/package/sharp)
-Run imageToAscii.js
+and run imageToAscii.js through node
