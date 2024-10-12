@@ -1,20 +1,27 @@
 var getPixels = require("get-pixels");
 var ndarray = require("ndarray");
+const sharp = require('sharp');
 
-// Picture has to be the same size as terminal window to work well
-getPixels('pic.jpeg', function (err, pixels) { //Replace Pic.png with your photo
-  if (err) {
-    console.log("Bad image path", err);
-    return;
-  }
-
-  colorArray = ndarrayTo4d(pixels.data);
-  printArray = coloredBoxes(colorArray);
-  finalArray = logArray(printArray, pixels.shape[0], pixels.shape[1]);
-  for (i = 0; i < finalArray.length; i++) {
-    console.log(finalArray[i].join(''));
-  }
-})
+sharp('pic.jpeg') //Replace pic.jpeg with your image
+  .resize(process.stdout.columns, process.stdout.rows, { fit: 'fill' })
+  .toFile('newPic.jpeg', (err, info) => { //You can rename he output pic, but you will also need to update line 11
+    if (err) {
+      console.error(err);
+    } else {
+      getPixels('newPic.jpeg', function (err, pixels) {
+        if (err) {
+          console.error(err);
+        } else {
+          colorArray = ndarrayTo4d(pixels.data);
+          printArray = coloredBoxes(colorArray);
+          finalArray = logArray(printArray, pixels.shape[0], pixels.shape[1]);
+          for (i = 0; i < finalArray.length; i++) {
+            console.log(finalArray[i].join(''))
+          }
+        }
+      })
+    }
+  })
 
 function ndarrayTo4d(array) {
   var endArray = new Array(); // Return array

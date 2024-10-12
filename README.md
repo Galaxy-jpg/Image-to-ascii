@@ -5,13 +5,13 @@ Using NodeJs it grabs the image and breaks it down to individual rgb values. The
 
 > NOTE
 >
-> This may not work for all terminals, I personally use Konsole which has the 378x112 size and ASCII support.
-> Only PNG & JPEGs are supported
+> This may not work for all terminals!
+> Only PNG & JPEGs are supported!
 >
 > It may not look very good on all terminals as each terminal prints ASCII differently.
-> The image provided is 378x112, you may need to find and shirk your own image for this.
+> Don't use too big of images, get-pixels does not work with really large images.
 
 ## Installation
 
-NPM install [get-pixels](https://www.npmjs.com/package/get-pixels?activeTab=readme) & [ndarry](https://www.npmjs.com/package/ndarray)
+NPM install [get-pixels](https://www.npmjs.com/package/get-pixels?activeTab=readme), [ndarry](https://www.npmjs.com/package/ndarray), & [sharp](https://www.npmjs.com/package/sharp)
 Run imageToAscii.js
